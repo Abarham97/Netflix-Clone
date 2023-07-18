@@ -11,13 +11,16 @@ function Movie(props){
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const image=`https://image.tmdb.org/t/p/w500${props.data.poster_path}`;
     return (
         <div>
-            <Card style={{ width: '18rem' ,height:'38rem' }}>
+            <Card style={{ width: '18rem' ,height:'60rem' }}>
     
       <Card.Body>
+      <Card.Img variant="top" src={image}/>
         <Card.Title><strong>Title:</strong>{props.data.title}</Card.Title>
-        <Card.Text><strong>poster_path:</strong>{props.data.poster_path}</Card.Text>
+        {/* <Card.Text><strong>poster_path:</strong>{props.data.poster_path}</Card.Text> */}
+       
         <Card.Text><strong>release_date:</strong>{props.data.release_date}</Card.Text>
         <Card.Text>
          {/* {props.data.overview} */}

@@ -16,7 +16,7 @@ function ModelMovie({ handleShow, handleClose, show, moviedata }) {
 
    }
 
-
+   const image=`https://image.tmdb.org/t/p/w500${moviedata.poster_path}`;
    
     return (
       <div>
@@ -25,8 +25,8 @@ function ModelMovie({ handleShow, handleClose, show, moviedata }) {
             <Modal.Title>{moviedata.title}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-          <img style={{width: '100%'}} src={`https://${moviedata.poster_path}`} alt={moviedata.title} />
-          <p>{moviedata.instructions}</p>
+          <img style={{width: '100%'}} src={image} alt={moviedata.title} />
+          <p>{moviedata.overview}</p>
           </Modal.Body>
           <Modal.Footer>
             <Button variant="secondary" onClick={handleClose}>
