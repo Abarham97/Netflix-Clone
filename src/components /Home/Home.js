@@ -2,8 +2,7 @@ import "./Home.css";
 import React from "react";
 import { useEffect, useState } from "react";
 import MovieList from "../MovieList/MovieList";
-import Movie from "../Movie/Movie";
-import NavBAr from "../NavBar/NavBar";
+
 
 function Home() {
     const [data, setData] = useState([]);

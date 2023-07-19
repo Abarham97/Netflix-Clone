@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+
 import "./MovieList.css";
 // import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+
 import Movie from "../Movie/Movie";
-import NavBAr from "../NavBar/NavBar";
+
 
 function MovieList(props) {
 //     let [limit, islimited]=useState(true);
