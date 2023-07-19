@@ -4,6 +4,7 @@ import "./MovieList.css";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Movie from "../Movie/Movie";
+import NavBAr from "../NavBar/NavBar";
 
 function MovieList(props) {
 //     let [limit, islimited]=useState(true);
@@ -33,8 +34,14 @@ function MovieList(props) {
 //       );
 
 return (
-
-    <Movie data={props.data}></Movie>
+      
+          <Movie  data={props.data}></Movie>
+     
+   
+           
+       
+ 
+    
 )
     
 }

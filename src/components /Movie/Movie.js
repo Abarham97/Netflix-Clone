@@ -19,18 +19,19 @@ function Movie(props){
       <Card.Body>
       <Card.Img variant="top" src={image}/>
         <Card.Title><strong>Title:</strong>{props.data.title}</Card.Title>
-        {/* <Card.Text><strong>poster_path:</strong>{props.data.poster_path}</Card.Text> */}
+      
        
         <Card.Text><strong>release_date:</strong>{props.data.release_date}</Card.Text>
         <Card.Text>
-         {/* {props.data.overview} */}
+       
          {limit ?<p>{props.data.overview.substring(0,300)+"..."}</p>:<p>{props.data.overview}</p>}
                 <button onClick={()=>islimited(!limit)}>{limit?"see More":"see less"}</button>
         </Card.Text>
         <Button onClick={handleShow} variant="primary">Add To Favourit</Button>
       </Card.Body>
     </Card>
-    <ModelMovie moviedata={props.data} handleClose={handleClose} handleShow={handleShow} show={show}></ModelMovie>
+    <ModelMovie    commentHandler={props.commentHandler} moviedata={props.data} handleClose={handleClose} handleShow={handleShow} show={show}></ModelMovie>
+    
         </div>
     )
 
