@@ -3,6 +3,8 @@ import React from "react";
 import { useEffect, useState } from "react";
 import MovieList from "../MovieList/MovieList";
 import Movie from "../Movie/Movie";
+import NavBAr from "../NavBar/NavBar";
+
 function Home() {
     const [data, setData] = useState([]);
     async function handleAllTrending() {
@@ -16,16 +18,32 @@ function Home() {
        
         setData(movie)
     }
+    function commentHandler(newMovie,id){
+  
+        data.map((movie) => {
+          if(movie.id === id){
+            movie.comment = newMovie.userComment;
+            return movie;
+          }else{
+            return movie;
+          }
+        })
+        
+      }
     useEffect(() => {
         handleAllTrending()
         console.log('insdie useEffect', data);
     },[]);
 
     return (
+     
         <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-around' }}>
+            
             {data.map((obj, i) => (
+          
+                 <MovieList   commentHandler={commentHandler} data={obj} key={i} />
+         
                
-                <MovieList data={obj} key={i} />
                
             ))}
 
