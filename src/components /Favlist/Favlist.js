@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { Card, Button } from "react-bootstrap";
-function Favlist(props) {
+function Favlist() {
   const [favMovie, setfavMovie] = useState([]);
   async function handleFavMovie() {
     const url = "https://movieapi-kuu5.onrender.com/favorite";
